@@ -4602,6 +4602,11 @@ result = anutrest[Math.floor(Math.random() * anutrest.length)]
 XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
 }
 break
+case 'pixiv': {
+if (!text) return replygcxeon(`Enter Query`)
+XeonBotInc.sendMessage(m.chat, { image: { url: `https://36df56e9-4616-4bab-9665-921dd8195a44-00-denr6byot9z.pike.replit.dev/?=${text}` },}, { quoted: m })
+}
+break
 case 'ringtone': {
 		if (!text) return replygcxeon(`Example : ${prefix + command} black rover`)
         let ringtone = require('./lib/scraper')
