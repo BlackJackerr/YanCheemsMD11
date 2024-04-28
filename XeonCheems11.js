@@ -4621,7 +4621,7 @@ const url = "https://www.pixiv.net/touch/ajax/search/illusts";
             'include_meta': "1",
             's_mode': "s_tag",
             'type': "all",
-            'word': querry,
+            'word': text,
             'csw': "0",
             'lang': "en",
             'version': "08a9c37ead5e5b84906f6cbcdb92429ae5d13ac8"
