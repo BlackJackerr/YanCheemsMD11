@@ -4603,6 +4603,7 @@ XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url
 }
 break
 case 'pixiv': {
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
 if (!text) return replygcxeon(`Enter Query`)
 const url = "https://www.pixiv.net/touch/ajax/search/illusts";
         const header = {
