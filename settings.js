@@ -27,7 +27,7 @@ global.wagc = "https://whatsapp.com/channel/0029VaG9VfPKWEKk1rxTQD20"
 global.themeemoji = '🪀'
 global.wm = "Yan Bot Inc."
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD11' //script link
-global.packname = "Sticker By"
+global.packname = "Created By"
 global.author = "Yan\n+6283890667327"
 global.creator = "6283890667327@s.whatsapp.net"
 global.xprefix = '.'
@@ -35,8 +35,8 @@ global.premium = ["6283890667327"] // Premium User
 global.hituet = 0
 
 //bot sett
-global.typemenu = 'v8' // menu type 'v1' => 'v8'
-global.typereply = 'v2' // reply type 'v1' => 'v3'
+global.typemenu = 'v1' // menu type 'v1' => 'v8'
+global.typereply = 'v1' // reply type 'v1' => 'v3'
 global.autoblocknumber = '92' //set autoblock country code
 global.antiforeignnumber = '91' //set anti foreign number country code
 global.welcome = false //welcome/left in groups
