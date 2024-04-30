@@ -1922,20 +1922,12 @@ if (!isAdmins && !XeonTheCreator) return XeonStickAdmin()
             break
            case 'nsfw': {
 if (!m.isGroup) return XeonStickGroup()
-if (!isBotAdmins) return XeonStickBotAdmin()
 if (!isAdmins && !XeonTheCreator) return XeonStickAdmin()
 if (args[0] === "on") {
 if (AntiNsfw) return replygcxeon('Already activated')
 ntnsfw.push(from)
 fs.writeFileSync('./src/data/function/nsfw.json', JSON.stringify(ntnsfw))
 replygcxeon('Success in turning on nsfw in this group')
-var groupe = await XeonBotInc.groupMetadata(from)
-var members = groupe['participants']
-var mems = []
-members.map(async adm => {
-mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-})
-//XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return replygcxeon('Already deactivated')
 let off = ntnsfw.indexOf(from)
