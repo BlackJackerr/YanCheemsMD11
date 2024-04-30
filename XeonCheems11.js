@@ -4931,59 +4931,35 @@ const reply = `
     return replygcxeon(`*${q}* isn't a valid text`)
     }
     break
-                case 'can': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} i dance?`)
-            	let bisa = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
+                case 'bisakah': {
+            	if (!text) return replygcxeon(`Tanya pertanyaan\n\nContoh : ${prefix + command} Aku menari?`)
+            	let bisa = [`Bisa`,`Tidak Bisa`]
                 let keh = bisa[Math.floor(Math.random() * bisa.length)]
-                let jawab = `*Can ${text}*\nAnswer : ${keh}`
+                let jawab = `*Bisakah ${text}*\nJawaban : ${keh}`
             await replygcxeon(jawab)
             }
             break
-            case 'is': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} she virgin?`)
-            	let apa = [`Yes`, `No`, `It Could Be`, `Thats right`]
+            case 'apakah': {
+            	if (!text) return replygcxeon(`Tanya pertanyaan\n\nContoh : ${prefix + command} Dia pintar?`)
+            	let apa = [`Iya`, `Tidak`, `Mungkin`, `Itu Benar`]
                 let kah = apa[Math.floor(Math.random() * apa.length)]
-                let jawab = `*Is ${text}*\nAnswer : ${kah}`                
+                let jawab = `*Apakah ${text}*\nJawaban : ${kah}`                
             await replygcxeon(jawab)
             }
             break
-            case 'when': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} will i get married?`)
-            	let kapan = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow']
+            case 'kapan': {
+            	if (!text) return replygcxeon(`Tanya pertanyaan\n\nContoh : ${prefix + command} Aku akan menikah?`)
+            	let kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 More Year','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Lusa']
                 let koh = kapan[Math.floor(Math.random() * kapan.length)]
-                let jawab = `*${command} ${text}*\nAnswer : ${koh}`                
-            await replygcxeon(jawab)
-            }
-            break
-case 'what': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} is your name?`)
-            	let lel = [`Ask Your Gf`, `I Dont Know`, `I Don't Know, Ask Your Father`]
-                let kah = lel[Math.floor(Math.random() * lel.length)]
-                let jawab = `*What ${text}*\nAnswer : ${kah}`                
-            await replygcxeon(jawab)
-            }
-            break
-case 'where': {
-if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} is your name?`)
-            	let wherelol = [`In the mountain`, `On mars`, `On moon`,`In the jungle`,`I dont know ask your mom`,`It could be somewhere`]
-                let kah = wherelol[Math.floor(Math.random() * wherelol.length)]
-                let jawab = `*Whwre ${text}*\nAnswer : ${kah}`              
-            await replygcxeon(jawab)
-            }
-            break
-case 'how': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} to date girl?`)
-            	let gimana = [`Ummm...`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really???`,`Dizzy Ah😴, don't wanna answer`,`Ohhh I See:(`,`The Patient, Boss:(`,`Really dude 🙄`]
-                let kah = gimana[Math.floor(Math.random() * gimana.length)]
-                let jawab = `*How ${text}*\nAnswer : ${kah}`                
+                let jawab = `*Kapan ${text}*\nJawaban : ${koh}`                
             await replygcxeon(jawab)
             }
             break
 case 'rate': {
-            	if (!text) return replygcxeon(`Example : ${prefix + command} my profile`)
+            	if (!text) return replygcxeon(`Contoh : ${prefix + command} kepintaran ku`)
             	let ra = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
                 let kah = ra[Math.floor(Math.random() * ra.length)]
-                let jawab = `*Rate ${text}*\nAnswer : ${kah}%`                
+                let jawab = `*Rate ${text}*\nJawaban : ${kah}%`                
             await replygcxeon(jawab)
             }
             break
@@ -6771,7 +6747,6 @@ case 'blur':
 │❏${xprefix}stickermenu
 │❏${xprefix}databasemenu
 │❏${xprefix}stalkermenu
-│❏${xprefix}bugmenu
 │❏${xprefix}othermenu
 └─────────────────┈ ⳹`
 if (typemenu === 'v1') {
@@ -8661,117 +8636,6 @@ if (typemenu === 'v1') {
 break
 case 'aimenu': {
 let xmenu_oh = `Hi ${pushname}${readmore}\n\n${aimenu(prefix, hituet)}`
-if (typemenu === 'v1') {
-                    XeonBotInc.sendMessage(m.chat, {
-                        image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
-                        caption: xmenu_oh
-                    }, {
-                        quoted: m
-                    })
-                } else if (typemenu === 'v2') {
-                    XeonBotInc.sendMessage(m.chat, {
-                        text: xmenu_oh,
-                        contextInfo: {
-                            externalAdReply: {
-                                showAdAttribution: true,
-                                title: botname,
-                                body: ownername,
-                                thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
-                                sourceUrl: wagc,
-                                mediaType: 1,
-                                renderLargerThumbnail: true
-                            }
-                        }
-                    }, {
-                        quoted: m
-                    })
-                }   if (typemenu === 'v3') {
-                    XeonBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XeonMedia/theme/Cheems-bot.mp4'),
-                        caption: xmenu_oh
-                    }, {
-                        quoted: m
-                    })
-                } else if (typemenu === 'v4') {
-                    XeonBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./XeonMedia/theme/Cheems-bot.mp4'),
-                        caption: xmenu_oh,
-                        gifPlayback: true
-                    }, {
-                        quoted: m
-                    })
-                } else if (typemenu === 'v5') {
-                    XeonBotInc.relayMessage(m.chat, {
-                        scheduledCallCreationMessage: {
-                            callType: "AUDIO",
-                            scheduledTimestampMs: 1200,
-                            title: xmenu_oh
-                        }
-                    }, {})
-                } else if (typemenu === 'v6') {
-                    XeonBotInc.relayMessage(m.chat,  {
-                       requestPaymentMessage: {
-                          currencyCodeIso4217: 'INR',
-                          amount1000: '9999999900',
-                          requestFrom: m.sender,
-                          noteMessage: {
-                             extendedTextMessage: {
-                                text: xmenu_oh,
-                                contextInfo: {
-                                   externalAdReply: {
-                                       showAdAttribution: true
-                                   }
-                                }
-                             }
-                          }
-                       }
-                    }, {})
-                } else if (typemenu === 'v7') {
-                    XeonBotInc.sendMessage(m.chat, {
-                        document: {
-                           url: 'https://i.ibb.co/2W0H9Jq/avatar-contact.png'
-                        },
-                        caption: xmenu_oh,
-                        mimetype: 'application/zip',
-                        fileName: ownername,
-                        fileLength: "99999999999",
-                        contextInfo: {
-                            externalAdReply: {
-                                showAdAttribution: true,
-                                title: botname,
-                                body: ownername,
-                                thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
-                                sourceUrl: wagc,
-                                mediaType: 1,
-                                renderLargerThumbnail: true
-                            }
-                        }
-                    }, {
-                        quoted: fstatus 
-                    })
-                } else if (typemenu === 'v8') {
-                	XeonBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./XeonMedia/theme/Cheems-bot.mp4'),
-      gifPlayback: true,
-      caption: xmenu_oh,
-      contextInfo: {
-      externalAdReply: {
-      title: botname,
-      body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
-      sourceUrl: ``,
-      mediaType: 1,
-      renderLargerThumbnail: true
-      }
-      }
-      }, {
-                        quoted: m
-                    })
-                    }
-}
-break
-case 'bugmenu': {
-let xmenu_oh = `Hi ${pushname}${readmore}\n\n${bugmenu(prefix, hituet)}`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
                         image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
