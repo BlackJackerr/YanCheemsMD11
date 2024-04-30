@@ -4600,7 +4600,7 @@ if (!text) return replygcxeon(`Enter Query`)
 Booru.search('danbooru', [`${text}`], { limit: 1, random: true }).then(
   posts => {
     for (let post of posts) {
-     XeonBotInc.sendMessage(m.chat, { image: { url: post.fileurl }, }, { quoted: m })
+     XeonBotInc.sendMessage(m.chat, { image: { url: post.fileUrl }, }, { quoted: m })
   }},
 )
 }
