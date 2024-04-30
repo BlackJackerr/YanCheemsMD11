@@ -3333,7 +3333,6 @@ break
                 if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replygcxeon('You are still in the game')
                 let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
                 if (room) {
-                    replygcxeon('Partner not found!')
                     room.o = m.chat
                     room.game.playerO = m.sender
                     room.state = 'PLAYING'
@@ -4276,11 +4275,11 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
     XeonBotInc.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => replygcxeon(mess.error))
 break
-case 'tiktok':{
+case 'tt': case 'tiktok':{
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
-XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.watermark }}, {quoted:m})
+XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.nowm }}, {quoted:m})
 })
 }
 break
