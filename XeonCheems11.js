@@ -42,6 +42,7 @@ const jsobfus = require('javascript-obfuscator')
 const {translate} = require('@vitalets/google-translate-api')
 const scp2 = require('./lib/scraper2') 
 const pkg = require('imgur')
+const Booru = require('booru')
 const { ImgurClient } = pkg
 const client = new ImgurClient({ clientId: "a0113354926015a" })
 const {
@@ -4591,6 +4592,17 @@ let { pinterest } = require('./lib/scraper')
 anutrest = await pinterest(text)
 result = anutrest[Math.floor(Math.random() * anutrest.length)]
 XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
+}
+break
+case 'danbooru': {
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+if (!text) return replygcxeon(`Enter Query`)
+Booru.search('danbooru', [`${text}`], { limit: 1, random: true }).then(
+  posts => {
+    for (let post of posts) {
+     XeonBotInc.sendMessage(m.chat, { image: { url: post.fileurl }, }, { quoted: m })
+  }},
+)
 }
 break
 case 'pixiv': {
