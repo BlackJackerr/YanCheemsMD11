@@ -4595,7 +4595,7 @@ XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url
 }
 break
 case 'danbooru': {
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
+if (!AntiNsfw && !XeonTheCreator) return replygcxeon(mess.nsfw)
 if (!text) return replygcxeon(`Enter Query`)
 Booru.search('danbooru', [`${text}`], { limit: 1, random: true }).then(
   posts => {
@@ -4606,7 +4606,7 @@ Booru.search('danbooru', [`${text}`], { limit: 1, random: true }).then(
 }
 break
 case 'pixiv': {
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
+if (!AntiNsfw && !XeonTheCreator) return replygcxeon(mess.nsfw)
 if (!text) return replygcxeon(`Enter Query`)
 const url = "https://www.pixiv.net/touch/ajax/search/illusts";
         const header = {
