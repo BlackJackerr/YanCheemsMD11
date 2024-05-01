@@ -3180,8 +3180,8 @@ break
             case 'smeme': {
             let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
             const swn = args.join(" ")
-            const pcknm = swn.split("|")[0]
-            const atnm = swn.split("|")[1]
+            const pcknm = swn.split("|")[0] : ''
+            const atnm = swn.split("|")[1] : ''
             let mem = await TelegraPh(media)
             ryangk = await getBuffer(`https://api.memegen.link/images/custom/${pcknm}/${atnm}.png?background=${mem}`)
             await XeonBotInc.sendImageAsSticker(m.chat, ryangk, m, { packname: global.packname, author: global.author })
