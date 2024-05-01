@@ -4625,7 +4625,7 @@ if (!AntiNsfw && !XeonTheCreator) return replygcxeon(mess.nsfw)
 if (!text) return replygcxeon(`Enter Query`)
 mikacnt = 0;
 while (mikacnt < args[0]) {
-Booru.search('danbooru', [`misono_nika`], { limit: 1, random: true }).then(
+Booru.search('danbooru', [`misono_mika`], { limit: 1, random: true }).then(
   posts => {
     for (let post of posts) {
      XeonBotInc.sendMessage(m.chat, { image: { url: post.fileUrl }, }, { quoted: m })
