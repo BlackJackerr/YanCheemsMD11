@@ -21,9 +21,9 @@ global.location = "Indonesia, Jawa Barat, Jakarta" //ur location
 //new
 global.botname = 'Yan' //ur bot name
 global.ownernumber = '6283890667327' //ur owner number
-global.ownername = 'Yan punya Mika' //ur owner name
+global.ownername = 'Yan Milik Mika' //ur owner name
 global.websitex = "https://www.youtube.com/@Ryannn0001"
-global.wagc = "https://chat.whatsapp.com/Eysz2OlLOyZF5M4DyeoUUS"
+global.wagc = "https://chat.whatsapp.com/LqcAUgbgc3t8gBoI5aVyG7"
 global.themeemoji = '🪀'
 global.wm = "Yan x Mika Bot Inc."
 global.botscript = 'https://github.com/BlackJackerr/YanCheemsMD11' //script link
