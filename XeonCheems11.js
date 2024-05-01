@@ -1872,7 +1872,7 @@ case 'block': case 'ban': {
                                 showAdAttribution: true,
                                 title: botname,
                                 body: `Sent in ${i.length} Group`,
-                                thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2886,7 +2886,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+                            thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -2924,7 +2924,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2940,7 +2940,7 @@ break
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2961,7 +2961,7 @@ break
                             showAdAttribution: true,
                             title: botname,
                             body: ownername,
-                            thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+                            thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
                             sourceUrl: wagc,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -5211,7 +5211,7 @@ replygcxeon(`
 break
 case 'pick': {
             	if (!m.isGroup) return XeonStickGroup()
-            	if (!text) return replygcxeon(`What do you want to pick?\nExample: ${prefix + command} idiot`)
+            	if (!text) return replygcxeon(`Apa yang mau kamu pilih?\nContoh: ${prefix + command} Dongo`)
              const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat)
                  .catch((e) => {}) : ""
              const participants = m.isGroup ? await groupMetadata.participants : ""
@@ -5219,7 +5219,7 @@ case 'pick': {
              let me = m.sender
              let xeonshimts = member[Math.floor(Math.random() * member.length)]
              XeonBotInc.sendMessage(from, { 
-text: `The most *${text}* here is *@${xeonshimts.split("@")[0]}*`,
+text: `Yang Paling *${text}* Disini Adalah *@${xeonshimts.split("@")[0]}*`,
 contextInfo:{
 forwardingScore: 9999999,
 isForwarded: true, 
@@ -6864,7 +6864,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -6975,7 +6975,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7086,7 +7086,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7197,7 +7197,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7308,7 +7308,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7419,7 +7419,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7530,7 +7530,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7641,7 +7641,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7752,7 +7752,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7863,7 +7863,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -7974,7 +7974,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8085,7 +8085,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8196,7 +8196,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8307,7 +8307,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8418,7 +8418,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8529,7 +8529,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8640,7 +8640,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
@@ -8751,7 +8751,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/fa6a3016313d720d5c7e8.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
