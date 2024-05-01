@@ -495,7 +495,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                if (!('autoread' in setting)) setting.autoread = false
                if (!('autorecordtype' in setting)) setting.autorecordtype = false
                if (!('autorecord' in setting)) setting.autorecord = false
-               if (!('autotype' in setting)) setting.autotype = false
+               if (!('autotype' in setting)) setting.autotype = true
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -517,7 +517,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                onlypc: false,
                autorecordtype: false,
                autorecord: false,
-               autotype: false,
+               autotype: true,
                watermark: {
                   packname: global.packname, 
                   author: global.author
