@@ -5219,7 +5219,7 @@ case 'pick': {
              let me = m.sender
              let xeonshimts = member[Math.floor(Math.random() * member.length)]
              XeonBotInc.sendMessage(from, { 
-text: `Yang Paling *${text}* Disini Adalah *@${xeonshimts.split("@")[0]}*`,
+text: `Yang *${text}* Disini *@${xeonshimts.split("@")[0]}*`,
 contextInfo:{
 forwardingScore: 9999999,
 isForwarded: true, 
