@@ -3021,6 +3021,21 @@ replygcxeon(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVide
 }
 }
 break
+case 'wm': {
+if (!isPremium) return replyprem(mess.premium)
+if (!quoted) return replygcxeon(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+if (/image/.test(mime)) {
+let media = await quoted.download()
+let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: text, author: "" })
+} else if (/video/.test(mime)) {
+if ((quoted.msg || quoted).seconds > 11) return replygcxeon('Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds')
+let media = await quoted.download()
+let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: text, author: "" })
+} else {
+replygcxeon(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+}
+}
+break
             case 'swm': case 'steal': case 'stickerwm': case 'take':{
 if (!isPremium) return replyprem(mess.premium)
 if (!args.join(" ")) return replygcxeon(`Where is the text?`)
