@@ -4620,18 +4620,18 @@ Booru.search('danbooru', [`${text}`], { limit: 1, random: true }).then(
 )
 }
 break
-case 'mika': {
+case 'danbooruv2': {
 if (!AntiNsfw && !XeonTheCreator) return replygcxeon(mess.nsfw)
 if (!text) return replygcxeon(`Enter Query`)
-mikacnt = 0;
-while (mikacnt < args[0]) {
-Booru.search('danbooru', [`misono_mika`], { limit: 1, random: true }).then(
+dbrcnt = 0;
+while (dbrcnt < args[1]) {
+Booru.search('danbooru', [args[0]], { limit: 1, random: true }).then(
   posts => {
     for (let post of posts) {
      XeonBotInc.sendMessage(m.chat, { image: { url: post.fileUrl }, }, { quoted: m })
   }},
 )
-mikacnt++;
+dbrcnt++;
 }
 }
 break
