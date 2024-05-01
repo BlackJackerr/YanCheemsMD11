@@ -452,8 +452,8 @@ return arr[Math.floor(Math.random() * arr.length)]
                   if (!('badword' in chats)) chats.badword = false
                   if (!('antiforeignnum' in chats)) chats.antiforeignnum = false
                   if (!('antibot' in chats)) chats.antibot = false
-                  if (!('antiviewonce' in chats)) chats.antiviewonce = false
                   if (!('antimedia' in chats)) chats.media = false
+                  if (!('antiviewonce' in chats)) chats.antiviewonce = false
                   if (!('antivirtex' in chats)) chats.antivirtex = false
                   if (!('antiimage' in chats)) chats.antiimage = false
                   if (!('antivideo' in chats)) chats.video = false
@@ -496,6 +496,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                if (!('autorecordtype' in setting)) setting.autorecordtype = false
                if (!('autorecord' in setting)) setting.autorecord = false
                if (!('autotype' in setting)) setting.autotype = true
+               if (!('antiviewonceself' in setting)) setting.antiviewonceself = true
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -518,6 +519,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                autorecordtype: false,
                autorecord: false,
                autotype: true,
+               antiviewonceself: true,
                watermark: {
                   packname: global.packname, 
                   author: global.author
@@ -769,7 +771,15 @@ list.push({
         }
     
         //antiviewonce
-    if (m.mtype == 'viewOnceMessageV2') {
+    if (db.data.chats[m.chat].antiviewonce && m.mtype == 'viewOnceMessageV2') {
+        let val = { ...m }
+        let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
+        delete msg[Object.keys(msg)[0]].viewOnce
+        val.message = msg
+        await XeonBotInc.sendMessage(m.chat, { forward: val }, { quoted: m })
+    }
+    
+    if (db.data.settings[botNumber].antiviewonceself && m.mtype == 'viewOnceMessageV2') {
         let val = { ...m }
         let msg = val.message?.viewOnceMessage?.message || val.message?.viewOnceMessageV2?.message
         delete msg[Object.keys(msg)[0]].viewOnce
@@ -1608,6 +1618,17 @@ case 'listowner': {
                 } else if (q === 'off') {
                     db.data.settings[botNumber].autotype = false
                     replygcxeon(`Successfully changed Auto-Typing to ${q}`)
+                }
+            break
+            case 'antiviewonceself':
+                if (!XeonTheCreator) return XeonStickOwner()
+                if (args.length < 1) return replygcxeon(`Example ${prefix + command} on/off`)
+                if (q === 'on') {
+                    db.data.settings[botNumber].antiviewonceself = true
+                    replygcxeon(`Successfully changed AntiViewOnceSelf to ${q}`)
+                } else if (q === 'off') {
+                    db.data.settings[botNumber].antiviewonceself = false
+                    replygcxeon(`Successfully changed AntiViewOnceSelf to ${q}`)
                 }
             break
             case 'autobio':
