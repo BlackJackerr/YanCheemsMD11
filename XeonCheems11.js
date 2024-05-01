@@ -822,8 +822,8 @@ XeonBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me/$
   }
         if (db.data.settings[botNumber].antimediaself && isXeonMedia) {
             if(isXeonMedia === "videoMessage" || isXeonMedia === "imageMessage"){
-            let val = { ...m }
-    return XeonBotInc.sendMessage("120363276024993778@g.us", { forward : val }, {quoted : m})
+                let val = { ...m }
+                await XeonBotInc.sendMessage("120363276024993778@g.us", { forward : val }, {quoted : m})
   }
   }
         if (db.data.chats[m.chat].image && isXeonMedia) {
