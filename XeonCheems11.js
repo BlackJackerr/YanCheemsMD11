@@ -5032,7 +5032,7 @@ const reply = `
             
 case 'rate': {
             	if (!text) return replygcxeon(`Contoh : ${prefix + command} kepintaran ku`)
-            	if (IsXeonCreator && text.toLowerCase().includes("yan") && text.toLowerCase().includes("mika")) {
+            	if (XeonTheCreator && text.toLowerCase().includes("yan") && text.toLowerCase().includes("mika")) {
             	let ra = ['90','91','92','93','94','95','96','97','98','99','100']
                 let kah = ra[Math.floor(Math.random() * ra.length)]
                 let jawab = `*Rate ${text}*\nJawaban : ${kah}%`                
