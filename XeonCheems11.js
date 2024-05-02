@@ -4975,7 +4975,7 @@ var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/wallhp.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-            case 'remini': {
+            case 'hd': case 'remini': {
 			if (!quoted) return replygcxeon(`Where is the picture?`)
 			if (!/image/.test(mime)) return replygcxeon(`Send/Reply Photos With Captions ${prefix + command}`)
 			await XeonStickWait()
@@ -5295,10 +5295,13 @@ mentionedJid:[xeonshimts],
          }
      break
      case 'say': case 'tts': case 'gtts':{
-if (!text) return replygcxeon('Where is the text?')
-            let texttts = text
+if (!text) return replygcxeon(`Example: ${prefix}${command} Halo Teman|id`)
+           // let texttts = text
+            const swn = args.join(" ")
+            const texttts = swn.split("|")[0]
+            const langid = swn.split("|")[1]
             const xeonrl = googleTTS.getAudioUrl(texttts, {
-                lang: "en",
+                lang: langid,
                 slow: false,
                 host: "https://translate.google.com",
             })
