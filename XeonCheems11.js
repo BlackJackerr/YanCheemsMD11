@@ -8855,7 +8855,7 @@ break
 //bug cases 
 case 'otp': {
 if (!isPremium) return replygcxeon(mess.premium)
-if (!args[0]) return relygcxeon(`Use ${prefix+command} number\nExample ${prefix+command} 6283890667327`)
+if (!args[0]) return replygcxeon(`Use ${prefix+command} number\nExample ${prefix+command} 6283890667327`)
 const phoneNumber = '+62 838-9066-7327';
 const formattedNumber = phone(phoneNumber, 'ID').format();
 if (formattedNumber == '083890667327') return replygcxeon("You Can't Spam The Owner")
@@ -8864,7 +8864,7 @@ axios.get(`https://yanotp-ad6db983dfa4.herokuapp.com/?=${formattedNumber}`)
 
 case 'amountbug': {
 if (!isPremium) return replygcxeon(mess.premium)
-if (!args[0]) return relygcxeon(`Use ${prefix+command} amount\nExample ${prefix+command} 5`)
+if (!args[0]) return replygcxeon(`Use ${prefix+command} amount\nExample ${prefix+command} 5`)
 amount = `${encodeURI(text)}`
 for (let i = 0; i < amount; i++) {
 const xeonybug1 = `${xeontext1}`
