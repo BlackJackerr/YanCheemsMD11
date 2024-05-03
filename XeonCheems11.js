@@ -4339,7 +4339,7 @@ XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.now
 })
 }
 break
-case 'ttaudio': case 'ttmp3': case: 'ttaudio': case 'tiktokaudio':{
+case 'tiktokaudio':{
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
