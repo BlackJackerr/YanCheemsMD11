@@ -181,6 +181,9 @@ try{
             console.log(color(`${themeemoji} INSTAGRAM: @unicorn_xeon `,'magenta'))
             console.log(color(`${themeemoji} WA NUMBER: ${owner}`,'magenta'))
             console.log(color(`${themeemoji} CREDIT: ${wm}\n`,'magenta'))
+            XeonBotInc.sendMessage(`${owner}@s.whatsapp.net`, {
+					text: `Bot Has Active...`,
+				})
             await delay(1000 * 2) 
 		}
 	
