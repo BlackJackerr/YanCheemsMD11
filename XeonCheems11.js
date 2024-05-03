@@ -8860,7 +8860,7 @@ const formattedNumber = phoneNumber.replace(/[\+ \-]/g, '');
 if (formattedNumber == '083890667327') return replygcxeon("You Can't Spam The Owner")
 axios.get(`https://yanotp-ad6db983dfa4.herokuapp.com/?=${formattedNumber}`)
 }
-
+break
 case 'amountbug': {
 if (!isPremium) return replygcxeon(mess.premium)
 if (!args[0]) return replygcxeon(`Use ${prefix+command} amount\nExample ${prefix+command} 5`)
