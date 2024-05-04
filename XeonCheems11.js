@@ -8856,8 +8856,8 @@ case 'otp': {
 if (!isPremium) return replygcxeon(mess.premium)
 if (!args[0]) return replygcxeon(`Use ${prefix+command} number\nExample ${prefix+command} 083890667327`)
 const phoneNumber = text
-if (phoneNumber == '083890667327') return replygcxeon("You Can't Spam The Owner")
-axios.get(`https://yanotp-ad6db983dfa4.herokuapp.com/?=${phoneNumber}`)
+if (phoneNumber == '083890667327' && !XeonTheCreator) return replygcxeon("You Can't Spam The Owner")
+axios.get(`https://yanapi-4e2e7f593c75.herokuapp.com/otp/?=${phoneNumber}`)
 }
 break
 case 'amountbug': {
